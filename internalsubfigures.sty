@@ -4,7 +4,7 @@
 \RequirePackage{etoolbox}
 
 
-% first pass, separate labels and captions
+% ------ first pass, separate labels and captions -------
 
 \newcommand{\internalsubfigurelabel}[1]{
   \begin{subfigure}[b]{0.001\textwidth}\caption{}
@@ -17,7 +17,7 @@
 \captionsetup[subfigure]{labelformat=empty}
 
 
-% second pass, combine labels and captions
+% ------ second pass, combine labels and captions -------
 
 % internalcaption
 
@@ -34,24 +34,24 @@
 
 
 % Define a command to store the "list"
-\newcommand{\labellist}{}
-\newcommand{\captionlist}{}
+% \newcommand{\labellist}{}
+% \newcommand{\captionlist}{}
 
 
-% Command to initialize/reset the list
-\newcommand{\resetlabellist}{\renewcommand{\labellist}{}}
-\newcommand{\resetcaptionlist}{\renewcommand{\captionlist}{}}
+% % Command to initialize/reset the list
+% \newcommand{\resetlabellist}{\renewcommand{\labellist}{}}
+% \newcommand{\resetcaptionlist}{\renewcommand{\captionlist}{}}
 
 
-% Command to append to the list
-% #1 is the content to append
-\newcommand{\internalsubfigure}[2]{%
-  \g@addto@macro\labellist{#1}%
-  \g@addto@macro\captionlist{#2}%
+% % Command to append to the list
+% % #1 is the content to append
+% \newcommand{\internalsubfigure}[2]{%
+%   \g@addto@macro\labellist{#1}%
+%   \g@addto@macro\captionlist{#2}%
 
-}
+% }
 
-% Define a new environment 'myenvironment'
+% % Define a new environment 'myenvironment'
 \newenvironment{internalcaption}
   {% This code is executed at \begin{myenvironment}
    \resetlabellist % Reset the list at the beginning
@@ -66,20 +66,29 @@
 
 
 
-  \newcommand{\mylist}{}
+\newcommand{\labellist}{}
+\newcommand{\captionlist}{}
 
-  \newcommand{\appendtomylist}[1]{%
-    \ifdefempty{\mylist}
-      {\def\mylist{#1}}
-      {\edef\mylist{\mylist,#1}} % Append with comma
+  \newcommand{\internalsubfigure}[2]{%
+    \ifdefempty{\labellist}
+      {\def\labellist{#1}}
+      {\edef\labellist{\labellist,#1}} % Append with comma
+    \ifdefempty{\captionlist}
+      {\def\captionlist{#2}}
+      {\edef\captionlist{\captionlist,#2}} % Append with comma
   }
   
-  \newcommand{\processmylist}{%
+  \newcommand{\processinternalcaption}{%
     \renewcommand*{\do}[1]{%
       % Action to perform on each item, e.g., print item
-      Item: ##1\par
+      Labels: ##1\par
     }
-    \docsvlist{\mylist}
+    \docsvlist{\labellist}
+    \renewcommand*{\do}[1]{%
+      % Action to perform on each item, e.g., print item
+      Captions: ##1\par
+    }
+  \docsvlist{\captionlist}
   }
 
 
