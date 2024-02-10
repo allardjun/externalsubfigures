@@ -15,6 +15,7 @@
 
 % Command to store the majorlabel (label for the full figure)
 \newcommand{\themajorlabel}{}
+\newcommand{\thefirstsentence}{}
 
 % Command to add a new element to labellist and captionlist
 \newcommand{\internalsubfigure}[2]{%
@@ -28,11 +29,14 @@
 
 % Command to create a label for the entire figure.
 \newcommand{\majorlabel}[1]{\def\themajorlabel{#1}}
+\newcommand{\firstsentence}[1]{\def\thefirstsentence{#1}}
+
 
 % Command to clear the labellist, captionlist and major label
 \newcommand{\resetlabellist}{\renewcommand{\labellist}{}}
 \newcommand{\resetcaptionlist}{\renewcommand{\captionlist}{}}
 \newcommand{\resetmajorlabel}{\renewcommand{\themajorlabel}{}}
+\newcommand{\resetfirstsentence}{\renewcommand{\thefirstsentence}{}}
 
 
 % Command to process the labels from labellist into subfigure labels
@@ -65,12 +69,14 @@
     \resetlabellist % Reset the list at the beginning
     \resetcaptionlist
     \resetmajorlabel
+    \resetfirstsentence
     \begin{figure}[#1]
     \centering % For example, centering all figures
   }
   {% End code - executed at \end{myfigure}
     \protect\processinternallabels
     \caption{
+      \thefirstsentence
       \protect\processinternalcaption
       \label{\themajorlabel}
     }
