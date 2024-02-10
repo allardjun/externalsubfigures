@@ -1,0 +1,88 @@
+\ProvidesPackage{internalsubfigures}[2024/02/09 v1.0 Jun's internal subfigure labeler]
+
+\RequirePackage{subcaption}
+\RequirePackage{etoolbox}
+
+
+% first pass, separate labels and captions
+
+\newcommand{\internalsubfigurelabel}[1]{
+  \begin{subfigure}[b]{0.001\textwidth}\caption{}
+    \label{#1}
+  \end{subfigure}
+}
+
+\renewcommand\thesubfigure{\Alph{subfigure}}
+\DeclareCaptionLabelFormat{empty}{}
+\captionsetup[subfigure]{labelformat=empty}
+
+
+% second pass, combine labels and captions
+
+% internalcaption
+
+% % Define a new environment 'myenvironment'
+% \newenvironment{internalcaption}
+%   {% This code is executed at \begin{myenvironment}
+%    \par\noindent\rule{\textwidth}{0.4pt}\par\nobreak % Top horizontal rule
+%    \noindent\bfseries % Make content bold
+%   }
+%   {% This code is executed at \end{myenvironment}
+%    \par\nobreak\noindent\rule{\textwidth}{0.4pt}\par % Bottom horizontal rule
+%   }
+
+
+
+% Define a command to store the "list"
+\newcommand{\labellist}{}
+\newcommand{\captionlist}{}
+
+
+% Command to initialize/reset the list
+\newcommand{\resetlabellist}{\renewcommand{\labellist}{}}
+\newcommand{\resetcaptionlist}{\renewcommand{\captionlist}{}}
+
+
+% Command to append to the list
+% #1 is the content to append
+\newcommand{\internalsubfigure}[2]{%
+  \g@addto@macro\labellist{#1}%
+  \g@addto@macro\captionlist{#2}%
+
+}
+
+% Define a new environment 'myenvironment'
+\newenvironment{internalcaption}
+  {% This code is executed at \begin{myenvironment}
+   \resetlabellist % Reset the list at the beginning
+   \resetcaptionlist
+  }
+  {% This code is executed at \end{myenvironment}
+   \par\noindent\textbf{Accumulated Content:}\par
+   \labellist % Use the accumulated content here
+   \captionlist % Use the accumulated content here
+
+  }
+
+
+
+  \newcommand{\mylist}{}
+
+  \newcommand{\appendtomylist}[1]{%
+    \ifdefempty{\mylist}
+      {\def\mylist{#1}}
+      {\edef\mylist{\mylist,#1}} % Append with comma
+  }
+  
+  \newcommand{\processmylist}{%
+    \renewcommand*{\do}[1]{%
+      % Action to perform on each item, e.g., print item
+      Item: ##1\par
+    }
+    \docsvlist{\mylist}
+  }
+
+
+
+
+\endinput
