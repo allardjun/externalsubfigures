@@ -3,42 +3,17 @@
 \RequirePackage{subcaption}
 \RequirePackage{etoolbox}
 
-
-% ------ first pass, separate labels and captions -------
-
-\newcommand{\internalsubfigurelabel}[1]{
-  \begin{subfigure}[b]{0.001\textwidth}\caption{}
-    \label{#1}
-  \end{subfigure}
-}
-
+% formatting
 \renewcommand\thesubfigure{\Alph{subfigure}}
 \DeclareCaptionLabelFormat{empty}{}
 \captionsetup[subfigure]{labelformat=empty}
 
 
-% ------ second pass, combine labels and captions -------
-
-% % Define a new environment 'internalcaption'
-\newenvironment{internalcaption}
-  {% This code is executed at \begin{myenvironment}
-   \resetlabellist % Reset the list at the beginning
-   \resetcaptionlist
-  }
-  {% This code is executed at \end{myenvironment}
-   %\par\noindent\textbf{Accumulated Content:}\par
-   %\labellist % Use the accumulated content here
-   %\captionlist % Use the accumulated content here
-   \processinternallabels
-   \caption{\processinternalcaption}
-
-  }
-
-
-
-% Command to add a new element to labellist and captionlist
+% Command to store labellist and captionlist
 \newcommand{\labellist}{}
 \newcommand{\captionlist}{}
+
+% Command to store the majorlabel (label for the full figure)
 \newcommand{\themajorlabel}{}
 
 % Command to add a new element to labellist and captionlist
@@ -54,12 +29,14 @@
 % Command to create a label for the entire figure.
 \newcommand{\majorlabel}[1]{\def\themajorlabel{#1}}
 
-
-% Command to clear the labellist and captionlist
+% Command to clear the labellist, captionlist and major label
 \newcommand{\resetlabellist}{\renewcommand{\labellist}{}}
 \newcommand{\resetcaptionlist}{\renewcommand{\captionlist}{}}
 \newcommand{\resetmajorlabel}{\renewcommand{\themajorlabel}{}}
 
+
+% Command to process the labels from labellist into subfigure labels
+% (to then feed to subfigure package)
 \newcommand{\processinternallabels}{%
     % Make the labels
   \renewcommand*\do[1]{%
@@ -71,6 +48,7 @@
   \expandafter\docsvlist\expandafter{\labellist} 
 } 
 
+% Command to process the caption. This will be fed into the \caption command later.
 \newcommand{\processinternalcaption}{%
   % Make the captions
   % \caption{%
@@ -81,13 +59,8 @@
   \expandafter\docsvlist\expandafter{\captionlist}
 }
 
-
-
-
-% --- third pass, custom figure environment ----
-
 % Define the custom figure environment
-\newenvironment{myfigure}[1][htbp]
+\newenvironment{busyfigure}[1][htbp]
   {% Begin code - executed at \begin{myfigure}
     \resetlabellist % Reset the list at the beginning
     \resetcaptionlist
@@ -97,12 +70,10 @@
   }
   {% End code - executed at \end{myfigure}
     \protect\processinternallabels
-    %\processinternalcaption
     \caption{
       \protect\processinternalcaption
       \label{\themajorlabel}
     }
-    %\caption{Hello from inside myfigure environment!}
     \end{figure}
   }
  

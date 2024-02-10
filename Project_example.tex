@@ -81,8 +81,8 @@
 \bibliographystyle{unsrtnat}
 %\bibliographystyle{biophysj}
 
-\title{Project JeanJacket}
-\author[a]{Jun}
+\title{A latex package to label externally-created subfigures}
+\author[a]{Jun Allard}
 \affil[a]{University of California Irvine}
 
 
@@ -98,28 +98,13 @@
 %\end{abstract}
 
 
-% \internalsubfigure{appleref}{Apple}
-% \internalsubfigure{orangeref}{Orange}
-% \internalsubfigure{zucchinniref}{Zucchinni}
-
-%\processinternalcaption
-
-% \begin{myenvironment}
-
-%         \appendtomylist{appleref}{An apple. }
-%         \appendtomylist{zucchiniref}{A zucchinni. }
-
-%         % The environment can use \mylist here, which has accumulated content.
-% \end{myenvironment}
-
-
-\begin{myfigure}[ht]
+\begin{busyfigure}[ht]
         \centering
         \includegraphics[width=4.5in]{figures/figJeanJacket.pdf}
         \internalsubfigure{fig:track}{(A) A track that means nothing on its own}
         \internalsubfigure{fig:pcolor}{(B) A pcolor map that also means nothing on its own}
         \majorlabel{fig:omics_conclusion}
-\end{myfigure}
+\end{busyfigure}
 
 I would like to refer to the main figure Figure~\ref{fig:omics_conclusion}. But this less informative, and instead I should refer to specific panels.
 
@@ -130,51 +115,15 @@ Now, I would like to just refer to the colormap, Figure~\ref{fig:pcolor}.
 
 \clearpage
 
-
-
-
-
-% \begin{figure}[ht]
-%         \centering
-%         \includegraphics[width=4.5in]{figures/figJeanJacket.pdf}
-%         \begin{internalcaption}
-%                 %\processmylist
-%                 \internalsubfigure{fig:track}{(A) A track that means nothing on its own}
-%                 \internalsubfigure{fig:pcolor}{(B) A pcolor map that also means nothing on its own}
-%         \end{internalcaption}
-%         %\label{fig:omics_conclusion}
-% \end{figure}
-
-
-
-% I would like to refer to the main figure Figure~\ref{fig:omics_conclusion}. But this less informative, and instead I should refer to specific panels.
-
-% Now, I would like to just refer to the track, Figure~\ref{fig:track}.
-
-% Now, I would like to just refer to the colormap, Figure~\ref{fig:pcolor}.
-
-
-
-\clearpage
-
-
-
-
-\begin{figure}[ht]
+\begin{busyfigure}[ht]
         \centering
         \includegraphics[width=4.5in]{figures/figJeanJacket.pdf}
+        \internalsubfigure{fig:gel}{(A) A gel.}
+        \internalsubfigure{fig:heatmap}{(B) A heatmap}
+        \majorlabel{fig:results_figure}
+\end{busyfigure}
 
-        \internalsubfigurelabel{fig:gel}
-        \internalsubfigurelabel{fig:heatmap}
-
-        \caption{A huge figure with a billion subfigures. 
-        (A) a gel that means something profound. 
-        (B) a heatmap that explains everything.}
-        \label{fig:main_conclusion}
-\end{figure}
-    
-
-I would like to refer to the main figure Figure~\ref{fig:main_conclusion}. But this less informative, and instead I should refer to specific panels.
+I would like to refer to the main figure Figure~\ref{fig:results_figure}. But this less informative, and instead I should refer to specific panels.
 
 Now, I would like to just refer to the gel, Figure~\ref{fig:gel}.
 
@@ -183,24 +132,33 @@ Now, I would like to just refer to the heatmap, Figure~\ref{fig:heatmap}.
 
 
 
-% \newpage
-% \begin{figure}[ht]
-%         \centering
-%         \includegraphics[width=4.5in]{figures/figJeanJacket.pdf}
-%         \internalsubfigurelabel{fig:schematic}
-%         \internalsubfigurelabel{fig:refereeexperiment}
-%         \caption{A huge figure with a billion subfigures. 
-%         (A) a schematic that shows the parts of the project. 
-%         (B) a stupid experiment requested by Referee \#3.}
-%         \label{fig:secondaryconclusion}
-% \end{figure}
+\clearpage
 
-% I would like to refer to the main secondary figure Figure~\ref{fig:secondaryconclusion}.
+\begin{busyfigure}[ht]
+        \centering
+        \includegraphics[width=4.5in]{figures/figJeanJacket.pdf}
+        \internalsubfigure{fig:schematic}{(A) A schematic to show how all the parts fit together}
+        \internalsubfigure{fig:referee_experiment}{(B) A useless and wasteful experiment suggested by Reviewer \#3}
+        \majorlabel{fig:final_figure}
+\end{busyfigure}
 
-% Now, I would like to just refer to the schematic, Figure~\ref{fig:schematic}.
+I would like to refer to the main figure Figure~\ref{fig:final_figure}. But this less informative, and instead I should refer to specific panels.
 
-% Now, I would like to just refer to the referee experiment, Figure~\ref{fig:refereeexperiment}.
+Now, I would like to just refer to the schematic, Figure~\ref{fig:schematic}.
 
+Now, I would like to just refer to the referee-recommended experiment, Figure~\ref{fig:referee_experiment}.
+
+
+\clearpage
+
+\subsection*{Discussion}
+
+In the discussion, I will discuss all the different subpanels.
+For example, the gel in Fig.~\ref{fig:gel}, and the schematic in Fig.~\ref{fig:schematic}.
+Or how about the genomic track in Fig.~\ref{fig:track}.
+
+
+If we move these panels around, all we need to do is change it in the captions (in the \verb|internalsubfigure| lines), and it with automatically change throughout the document! 
 
 
 \end{document}
