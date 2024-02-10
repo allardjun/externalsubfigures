@@ -54,22 +54,12 @@
 \newcommand{\resetcaptionlist}{\renewcommand{\captionlist}{}}
 
 \newcommand{\processinternalcaption}{%
-  \renewcommand*{\do}[1]{%
-    % Action to perform on each item, e.g., print item
-    % \begin{subfigure}[b]{0.001\textwidth}\caption{}
-    %   \label{##1}
-    % \end{subfigure}
-    Item #1
+  \renewcommand*\do[1]{%
+    % This is where each item is actually processed
+    Item: ##1\par
   }
-  \docsvlist{\labellist}
-%   \caption{
-%   \renewcommand*{\do}[1]{%
-%     % Action to perform on each item, e.g., print item
-%     ##1\par
-%   }
-%   }
-% \docsvlist{\captionlist}
-}
+  \expandafter\docsvlist\expandafter{\labellist}
+} 
 
  
 \endinput
