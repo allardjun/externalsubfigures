@@ -19,79 +19,57 @@
 
 % ------ second pass, combine labels and captions -------
 
-% internalcaption
-
-% % Define a new environment 'myenvironment'
-% \newenvironment{internalcaption}
-%   {% This code is executed at \begin{myenvironment}
-%    \par\noindent\rule{\textwidth}{0.4pt}\par\nobreak % Top horizontal rule
-%    \noindent\bfseries % Make content bold
-%   }
-%   {% This code is executed at \end{myenvironment}
-%    \par\nobreak\noindent\rule{\textwidth}{0.4pt}\par % Bottom horizontal rule
-%   }
-
-
-
-% Define a command to store the "list"
-% \newcommand{\labellist}{}
-% \newcommand{\captionlist}{}
-
-
-% % Command to initialize/reset the list
-% \newcommand{\resetlabellist}{\renewcommand{\labellist}{}}
-% \newcommand{\resetcaptionlist}{\renewcommand{\captionlist}{}}
-
-
-% % Command to append to the list
-% % #1 is the content to append
-% \newcommand{\internalsubfigure}[2]{%
-%   \g@addto@macro\labellist{#1}%
-%   \g@addto@macro\captionlist{#2}%
-
-% }
-
-% % Define a new environment 'myenvironment'
+% % Define a new environment 'internalcaption'
 \newenvironment{internalcaption}
   {% This code is executed at \begin{myenvironment}
    \resetlabellist % Reset the list at the beginning
    \resetcaptionlist
   }
   {% This code is executed at \end{myenvironment}
-   \par\noindent\textbf{Accumulated Content:}\par
-   \labellist % Use the accumulated content here
-   \captionlist % Use the accumulated content here
+   %\par\noindent\textbf{Accumulated Content:}\par
+   %\labellist % Use the accumulated content here
+   %\captionlist % Use the accumulated content here
+   \processinternalcaption
 
   }
 
 
 
+% Command to add a new element to labellist and captionlist
 \newcommand{\labellist}{}
 \newcommand{\captionlist}{}
 
-  \newcommand{\internalsubfigure}[2]{%
-    \ifdefempty{\labellist}
-      {\def\labellist{#1}}
-      {\edef\labellist{\labellist,#1}} % Append with comma
-    \ifdefempty{\captionlist}
-      {\def\captionlist{#2}}
-      {\edef\captionlist{\captionlist,#2}} % Append with comma
+% Command to add a new element to labellist and captionlist
+\newcommand{\internalsubfigure}[2]{%
+  \ifdefempty{\labellist}
+    {\def\labellist{#1}}
+    {\edef\labellist{\labellist,#1}} % Append with comma
+  \ifdefempty{\captionlist}
+    {\def\captionlist{#2}}
+    {\edef\captionlist{\captionlist,#2}} % Append with comma
+}
+
+% Command to clear the labellist and captionlist
+\newcommand{\resetlabellist}{\renewcommand{\labellist}{}}
+\newcommand{\resetcaptionlist}{\renewcommand{\captionlist}{}}
+
+\newcommand{\processinternalcaption}{%
+  \renewcommand*{\do}[1]{%
+    % Action to perform on each item, e.g., print item
+    % \begin{subfigure}[b]{0.001\textwidth}\caption{}
+    %   \label{##1}
+    % \end{subfigure}
+    Item #1
   }
-  
-  \newcommand{\processinternalcaption}{%
-    \renewcommand*{\do}[1]{%
-      % Action to perform on each item, e.g., print item
-      Labels: ##1\par
-    }
-    \docsvlist{\labellist}
-    \renewcommand*{\do}[1]{%
-      % Action to perform on each item, e.g., print item
-      Captions: ##1\par
-    }
-  \docsvlist{\captionlist}
-  }
+  \docsvlist{\labellist}
+%   \caption{
+%   \renewcommand*{\do}[1]{%
+%     % Action to perform on each item, e.g., print item
+%     ##1\par
+%   }
+%   }
+% \docsvlist{\captionlist}
+}
 
-
-
-
+ 
 \endinput

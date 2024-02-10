@@ -98,11 +98,11 @@
 %\end{abstract}
 
 
-\internalsubfigure{appleref}{Apple}
-\internalsubfigure{orangeref}{Orange}
-\internalsubfigure{zucchinniref}{Zucchinni}
+% \internalsubfigure{appleref}{Apple}
+% \internalsubfigure{orangeref}{Orange}
+% \internalsubfigure{zucchinniref}{Zucchinni}
 
-\processinternalcaption
+%\processinternalcaption
 
 % \begin{myenvironment}
 
@@ -116,14 +116,16 @@
 \clearpage
 
 
-% \begin{figure}[ht]
-%         \centering
-%         \includegraphics[width=4.5in]{figures/figJeanJacket.pdf}
-%         \begin{internalcaption}
-%                 \internalsubfigure{fig:track}{(A) A track that means nothing on its own}
-%                 \internalsubfigure{fig:pcolor}{(B) A pcolor map that also means nothing on its own}
-%         \end{internalcaption}
-% \end{figure}
+\begin{figure}[ht]
+        \centering
+        \includegraphics[width=4.5in]{figures/figJeanJacket.pdf}
+        \caption{\begin{internalcaption}
+                %\processmylist
+                \internalsubfigure{fig:track}{(A) A track that means nothing on its own}
+                \internalsubfigure{fig:pcolor}{(B) A pcolor map that also means nothing on its own}
+        \end{internalcaption}}
+        
+\end{figure}
 
 
 
@@ -163,100 +165,25 @@ Now, I would like to just refer to the heatmap, Figure~\ref{fig:heatmap}.
 
 
 
-\newpage
-\begin{figure}[ht]
-        \centering
-        \includegraphics[width=4.5in]{figures/figJeanJacket.pdf}
-        \internalsubfigurelabel{fig:schematic}
-        \internalsubfigurelabel{fig:refereeexperiment}
-        \caption{A huge figure with a billion subfigures. 
-        (A) a schematic that shows the parts of the project. 
-        (B) a stupid experiment requested by Referee \#3.}
-        \label{fig:secondaryconclusion}
-\end{figure}
+% \newpage
+% \begin{figure}[ht]
+%         \centering
+%         \includegraphics[width=4.5in]{figures/figJeanJacket.pdf}
+%         \internalsubfigurelabel{fig:schematic}
+%         \internalsubfigurelabel{fig:refereeexperiment}
+%         \caption{A huge figure with a billion subfigures. 
+%         (A) a schematic that shows the parts of the project. 
+%         (B) a stupid experiment requested by Referee \#3.}
+%         \label{fig:secondaryconclusion}
+% \end{figure}
 
-I would like to refer to the main secondary figure Figure~\ref{fig:secondaryconclusion}.
+% I would like to refer to the main secondary figure Figure~\ref{fig:secondaryconclusion}.
 
-Now, I would like to just refer to the schematic, Figure~\ref{fig:schematic}.
+% Now, I would like to just refer to the schematic, Figure~\ref{fig:schematic}.
 
-Now, I would like to just refer to the referee experiment, Figure~\ref{fig:refereeexperiment}.
-
-
-
-\end{document}
+% Now, I would like to just refer to the referee experiment, Figure~\ref{fig:refereeexperiment}.
 
 
-\section{Project seed}
-
-\subsection*{Summary}
-\paragraph{Background/major question} \lipsum[2]
-\paragraph{Specific question, puzzle or hypothesis}\lipsum[2]
-\paragraph{Here we}\lipsum[2]
-\paragraph{Methods, tools, expertise, skills}\lipsum[2]
-\paragraph{Expected results}\lipsum[2]
-\paragraph{Outcomes and implications}\lipsum[2]
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h!]
-\centering
-\includegraphics[width=4.5in]{figJeanJacket.pdf}
-\caption{An awesome model of a puzzling phenomenon}
-\label{fig:JeanJacketSchematic}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Candidate titles}
-
-\begin{itemize}
-\item Predictive dynamic modeling connects timescales of day-to-day gene expression and decade-scale disease progression of Alzheimer's Disease using $\mathbb{C}^\star$ algebras
-\item Ito lemma and Boltzmann statistics provide a cost-effective treatment for cardiovascular disease
-\item Hybrid Metropolis-Gillespie algorithm reveals a novel design for enhanced CAR-T therapy by dynamnic recruitment of non-effector molecular crowders to the T cell membranes
-\item Comparative study of noncanonical protrusions and what they optimize
-\item Accelerated tendon healing by morphological alterations to tenocyte projections
-\end{itemize}
-
-\subsection*{Basic model}
-
-\lipsum[2-5]
-
-\subsection*{Reading}
-Papers marked with $^{\bullet}$ are of notable interest.
-\begin{itemize}
-\item Primarily modeling: \citet{Slaughter.2013}, \citet{Zhang.2019}
-\item Review articles on the system
-\item Primarily experimental
-\end{itemize}
-
-
-\subsection*{First steps}
-
-Dimensional analysis. Pull the other cell with \SI{10}{\pico\newton \per \second}. Deviatoric stress \SI{7e3}{\pascal}. Inside a math environment $R=\SI{120}{\micro\meter}$.
-
-
-% Bibliography
-\bibliography{jeanjacket}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Supplemental
-\clearpage
-\setcounter{table}{0}
-        \renewcommand{\thetable}{S\arabic{table}}%
-\setcounter{figure}{0}
-        \renewcommand{\thefigure}{S\arabic{figure}}%
-\renewcommand{\listfigurename}{List of Supporting Figures}
-\renewcommand{\contentsname}{List of Supporting Text}
-
-%\section{Supplemental material}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{figure}[h!t]
-%\centering
-%\includegraphics[width=4.5in]{figJeanJacket.pdf}
-%\caption{This is a supplemental figure}
-%\label{fig:DetailedJeanJacketSchematic}
-%\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
+

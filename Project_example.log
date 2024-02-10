@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  9 FEB 2024 17:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  9 FEB 2024 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -382,7 +382,15 @@ Package: internalsubfigures 2024/02/09 v1.0 Jun's internal subfigure labeler
 Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
 \c@subfigure=\count302
 \c@subtable=\count303
-))
+)
+! Illegal parameter number in definition of \processinternalcaption.
+<to be read again> 
+                   1
+l.72 }
+      
+? q
+OK, entering \batchmode...
+)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -416,8 +424,7 @@ LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 9
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
-(./Project_example.aux)
+) (./Project_example.aux)
 \openout1 = `Project_example.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
@@ -452,7 +459,8 @@ LaTeX Font Info:    ... okay on input line 91.
 \MPnumerator=\count312
 \makeMPintoPDFobject=\count313
 \everyMPtoPDFconversion=\toks31
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/grfext/grfext.sty
@@ -508,7 +516,6 @@ nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 91.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -545,6 +552,7 @@ or `english'. on input line 91.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 93.
 
+
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -556,32 +564,31 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Reference `fig:omics_conclusion' on page 2 undefined on input li
-ne 130.
-
-
-LaTeX Warning: Reference `fig:track' on page 2 undefined on input line 132.
-
-
-LaTeX Warning: Reference `fig:colormap' on page 2 undefined on input line 134.
-
-[2
-
-]
-<figures/figJeanJacket.pdf, id=15, 506.86563pt x 230.56439pt>
+<figures/figJeanJacket.pdf, id=10, 506.86563pt x 230.56439pt>
 File: figures/figJeanJacket.pdf Graphic file (type pdf)
 <use figures/figJeanJacket.pdf>
-Package pdftex.def Info: figures/figJeanJacket.pdf  used on input line 145.
+Package pdftex.def Info: figures/figJeanJacket.pdf  used on input line 121.
 (pdftex.def)             Requested size: 325.215pt x 147.94064pt.
- [3
+
+LaTeX Warning: Reference `fig:omics_conclusion' on page 2 undefined on input li
+ne 132.
+
+
+LaTeX Warning: Reference `fig:track' on page 2 undefined on input line 134.
+
+
+LaTeX Warning: Reference `fig:colormap' on page 2 undefined on input line 136.
+
+ [2
 
  <./figures/figJeanJacket.pdf>]
 File: figures/figJeanJacket.pdf Graphic file (type pdf)
 <use figures/figJeanJacket.pdf>
-Package pdftex.def Info: figures/figJeanJacket.pdf  used on input line 169.
+Package pdftex.def Info: figures/figJeanJacket.pdf  used on input line 147.
 (pdftex.def)             Requested size: 325.215pt x 147.94064pt.
- [4] (./Project_example.aux)
+ [3
+
+] (./Project_example.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -589,20 +596,20 @@ Package rerunfilecheck Info: File `Project_example.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 16685 strings out of 478268
- 319112 string characters out of 5846346
- 659751 words of memory out of 5000000
- 34687 multiletter control sequences out of 15000+600000
+ 16679 strings out of 478268
+ 318997 string characters out of 5846346
+ 659409 words of memory out of 5000000
+ 34682 multiletter control sequences out of 15000+600000
  484262 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,7n,79p,312b,749s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 70i,7n,79p,363b,749s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/202
 2/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on Project_example.pdf (4 pages, 580939 bytes).
+Output written on Project_example.pdf (3 pages, 579109 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
+ 82 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
