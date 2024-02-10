@@ -39,6 +39,7 @@
 % Command to add a new element to labellist and captionlist
 \newcommand{\labellist}{}
 \newcommand{\captionlist}{}
+\newcommand{\themajorlabel}{}
 
 % Command to add a new element to labellist and captionlist
 \newcommand{\internalsubfigure}[2]{%
@@ -50,18 +51,14 @@
     {\edef\captionlist{\captionlist,#2}} % Append with comma
 }
 
+% Command to create a label for the entire figure.
+\newcommand{\majorlabel}[1]{\def\themajorlabel{#1}}
+
+
 % Command to clear the labellist and captionlist
 \newcommand{\resetlabellist}{\renewcommand{\labellist}{}}
 \newcommand{\resetcaptionlist}{\renewcommand{\captionlist}{}}
-
-% \newcommand{\processinternalcaption}{%
-%   \renewcommand*\do[1]{%
-%     % This is where each item is actually processed
-%     Item: ##1\par
-%   }
-%   \expandafter\docsvlist\expandafter{\labellist}
-% } 
-
+\newcommand{\resetmajorlabel}{\renewcommand{\themajorlabel}{}}
 
 \newcommand{\processinternallabels}{%
     % Make the labels
@@ -84,5 +81,29 @@
   \expandafter\docsvlist\expandafter{\captionlist}
 }
 
+
+
+
+% --- third pass, custom figure environment ----
+
+% Define the custom figure environment
+\newenvironment{myfigure}[1][htbp]
+  {% Begin code - executed at \begin{myfigure}
+    \resetlabellist % Reset the list at the beginning
+    \resetcaptionlist
+    \resetmajorlabel
+    \begin{figure}[#1]
+    \centering % For example, centering all figures
+  }
+  {% End code - executed at \end{myfigure}
+    \protect\processinternallabels
+    %\processinternalcaption
+    \caption{
+      \protect\processinternalcaption
+      \label{\themajorlabel}
+    }
+    %\caption{Hello from inside myfigure environment!}
+    \end{figure}
+  }
  
 \endinput

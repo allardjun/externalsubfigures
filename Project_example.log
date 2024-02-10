@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  9 FEB 2024 18:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  9 FEB 2024 21:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -351,8 +351,7 @@ Package translations Info: No language package found. I am going to use `english
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 91.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
-No file Project_example.aux.
+) (./Project_example.aux)
 \openout1 = `Project_example.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
@@ -373,7 +372,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
 LaTeX Font Info:    ... okay on input line 91.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
 LaTeX Font Info:    ... okay on input line 91.
-(/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count308
 \scratchdimen=\dimen183
@@ -417,6 +416,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 91.
 LaTeX Info: Redefining \pageref on input line 91.
 LaTeX Info: Redefining \nameref on input line 91.
+ (./Project_example.out) (./Project_example.out)
 \@outlinefile=\write3
 \openout3 = `Project_example.out'.
 
@@ -468,83 +468,39 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 93.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<figures/figJeanJacket.pdf, id=10, 506.86563pt x 230.56439pt>
+)
+<figures/figJeanJacket.pdf, id=4, 506.86563pt x 230.56439pt>
 File: figures/figJeanJacket.pdf Graphic file (type pdf)
 <use figures/figJeanJacket.pdf>
-Package pdftex.def Info: figures/figJeanJacket.pdf  used on input line 121.
+Package pdftex.def Info: figures/figJeanJacket.pdf  used on input line 118.
 (pdftex.def)             Requested size: 325.215pt x 147.94064pt.
+ [1
 
-/Users/jun/git/pub/subfigures/Project_example.tex:126: Argument of \@caption has an extra }.
-<inserted text> 
-                \par 
-l.126         \end{internalcaption}
-                                   
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figures/figJeanJacket.pdf>]
+File: figures/figJeanJacket.pdf Graphic file (type pdf)
+<use figures/figJeanJacket.pdf>
+Package pdftex.def Info: figures/figJeanJacket.pdf  used on input line 165.
+(pdftex.def)             Requested size: 325.215pt x 147.94064pt.
+ [2
 
-Runaway argument?
-\@captype 
-/Users/jun/git/pub/subfigures/Project_example.tex:126: Paragraph ended before \@caption was complete.
-<to be read again> 
-                   \par 
-l.126         \end{internalcaption}
-                                   
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
 
-/Users/jun/git/pub/subfigures/Project_example.tex:126: Argument of \caption@ydblarg has an extra }.
-<inserted text> 
-                \par 
-l.126         \end{internalcaption}
-                                   
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-{\@caption \@captype }*{\let \l@ngrel@x \relax \renew@command }\reserved@a 
-/Users/jun/git/pub/subfigures/Project_example.tex:126: Paragraph ended before \caption@ydblarg was complete.
-<to be read again> 
-                   \par 
-l.126         \end{internalcaption}
-                                   
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-)
-! Incomplete \iffalse; all text was ignored after line 126.
-<inserted text> 
-                \fi 
-<*> .../jun/git/pub/subfigures/Project_example.tex
-                                                  
-The file ended while I was skipping conditional text.
-This kind of error happens when you say `\if...' and forget
-the matching `\fi'. I've inserted a `\fi'; this might work.
-
-! Emergency stop.
-<*> .../jun/git/pub/subfigures/Project_example.tex
-                                                  
-*** (job aborted, no legal \end found)
-
- 
+] (./Project_example.aux)
+Package rerunfilecheck Info: File `Project_example.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
- 16657 strings out of 478268
- 318747 string characters out of 5846346
- 659113 words of memory out of 5000000
- 34674 multiletter control sequences out of 15000+600000
- 481558 words of font info for 57 fonts, out of 8000000 for 9000
+ 16685 strings out of 478268
+ 319166 string characters out of 5846346
+ 663709 words of memory out of 5000000
+ 34690 multiletter control sequences out of 15000+600000
+ 482636 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,7n,79p,278b,746s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 70i,7n,79p,320b,747s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on Project_example.pdf (2 pages, 571042 bytes).
+PDF statistics:
+ 76 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+
