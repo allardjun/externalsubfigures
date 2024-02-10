@@ -29,7 +29,8 @@
    %\par\noindent\textbf{Accumulated Content:}\par
    %\labellist % Use the accumulated content here
    %\captionlist % Use the accumulated content here
-   \processinternalcaption
+   \processinternallabels
+   \caption{\processinternalcaption}
 
   }
 
@@ -53,13 +54,35 @@
 \newcommand{\resetlabellist}{\renewcommand{\labellist}{}}
 \newcommand{\resetcaptionlist}{\renewcommand{\captionlist}{}}
 
-\newcommand{\processinternalcaption}{%
+% \newcommand{\processinternalcaption}{%
+%   \renewcommand*\do[1]{%
+%     % This is where each item is actually processed
+%     Item: ##1\par
+%   }
+%   \expandafter\docsvlist\expandafter{\labellist}
+% } 
+
+
+\newcommand{\processinternallabels}{%
+    % Make the labels
   \renewcommand*\do[1]{%
     % This is where each item is actually processed
-    Item: ##1\par
+    \begin{subfigure}[b]{0.001\textwidth}\caption{}
+      \label{##1}
+    \end{subfigure}
   }
-  \expandafter\docsvlist\expandafter{\labellist}
+  \expandafter\docsvlist\expandafter{\labellist} 
 } 
+
+\newcommand{\processinternalcaption}{%
+  % Make the captions
+  % \caption{%
+  \renewcommand*\do[1]{%
+  % This is where each item is actually processed
+    ##1
+  }
+  \expandafter\docsvlist\expandafter{\captionlist}
+}
 
  
 \endinput
