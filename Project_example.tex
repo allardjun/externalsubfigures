@@ -15,51 +15,10 @@
 \usepackage{titling}
 \usepackage{authblk} % must come after titling package loading
 
-% --------- standard packages ---------
-%\usepackage{amsfonts}
-\usepackage{amsmath}
-\usepackage{amssymb}
-%\usepackage{array}
-%\usepackage{bm}
-%\usepackage{color}
-%\usepackage{chemarr}
-%\usepackage{float}
 \usepackage[utf8]{inputenc}
-\usepackage{lipsum}
-%\usepackage{mathtools}
-%\usepackage{multicol}
-%\usepackage{multirow}
-%\usepackage{pdfsync}
-%\usepackage{tocloft}
-%\usepackage{verbatim}
-%\usepackage{wrapfig}
 
 
-% --------- packages, less often used ---------
-%\usepackage[export]{adjustbox}
-%\usepackage{amsopn}
-%\usepackage{cancel} % adds strikethrough
-%\usepackage{CJK} % Chinese Japanese Korean
-%\usepackage{dcolumn} % align columns in a table
-%\usepackage{dsfont}
-%\usepackage{epsfig}
-%\usepackage{epstopdf}
-%\usepackage{esint} % integrals
-%\usepackage{framed}
-%\usepackage{physics} %for \vqty, \dd, \dv
-%\usepackage{rotating}
-%\usepackage{setspace} % set space between lines
-%\usepackage{subcaption}
-%\usepackage{tcolorbox}
-%\usepackage[normalem]{ulem} % for underlining
-% --------- for typesetting code blocks --------
-%\usepackage{algorithmic} % for code including Matlab
-%\usepackage{listings} % for code including Matlab
-%\usepackage[numbered,framed,basicstyle]{matlab-prettifier}
-
-
-
-
+% The new package!
 \usepackage{internalsubfigures}
 
 
@@ -98,69 +57,81 @@
 %\end{abstract}
 
 
+\section{The old way of referencing figures}
+
+
+\begin{figure}[ht]
+        \centering
+        \includegraphics[width=4.5in]{example-image} 
+        \caption{A sentence describing the whole figure, which is about a fictional protein called ``oldschoolin''.
+        (A) A family of curves that means nothing on its own.
+        (B) A ribbon diagram of ``oldschoolin".
+        \label{fig:oldschool}}
+\end{figure}
+
+I would like to refer to the main figure about ``oldschoolin'', shown in Figure~\ref{fig:oldschool}. 
+But this less informative, and instead I should refer to specific panels.
+Now, I would like to just refer the family of curves in Figure~\ref{fig:oldschool}A.
+And now, I would like to just refer to the ribbon diagram in Figure~\ref{fig:oldschool}B.
+If you need to change the subfigures, you need to change the above references manually.
+
+
+\clearpage
+
+\section{The ``busyfigure'' way to reference figures}
+
 \begin{busyfigure}[ht]
         \centering
-        \includegraphics[width=4.5in]{figures/figJeanJacket.pdf}
+        \includegraphics[width=4.5in]{example-image} 
         \firstsentence{A sentence describing the whole figure.}
-        \internalsubfigure{fig:track}{(A) A track that means nothing on its own}
-        \internalsubfigure{fig:pcolor}{(B) A pcolor map that also means nothing on its own}
+        \internalsubfigure{fig:track}{(A) A track that means nothing on its own.}
+        \internalsubfigure{fig:pcolor}{(B) A pcolor map that also means nothing on its own.}
+        \lastsentence{All the data in this figure are scaled by the size of the universe.}
         \majorlabel{fig:omics_conclusion}
 \end{busyfigure}
 
-I would like to refer to the main figure Figure~\ref{fig:omics_conclusion}. But this less informative, and instead I should refer to specific panels.
-
+I would like to refer to the main figure Figure~\ref{fig:omics_conclusion}. 
+But this less informative, and instead I should refer to specific panels.
 Now, I would like to just refer to the track, Figure~\ref{fig:track}.
-
-Now, I would like to just refer to the colormap, Figure~\ref{fig:pcolor}.
-
+And now, I would like to just refer to the colormap, Figure~\ref{fig:pcolor}.
+These panels are referenced directly, which means that they will automatically update if you move their captions around.
 
 \clearpage
 
 \begin{busyfigure}[ht]
         \centering
-        \includegraphics[width=4.5in]{figures/figJeanJacket.pdf}
+        \includegraphics[width=4.5in]{example-image} 
         \internalsubfigure{fig:gel}{(A) A gel.}
         \internalsubfigure{fig:heatmap}{(B) A heatmap}
         \majorlabel{fig:results_figure}
 \end{busyfigure}
 
-I would like to refer to the main figure Figure~\ref{fig:results_figure}. But this less informative, and instead I should refer to specific panels.
-
+I would like to refer to the main figure Figure~\ref{fig:results_figure}.
+But this less informative, and instead I should refer to specific panels.
 Now, I would like to just refer to the gel, Figure~\ref{fig:gel}.
+And now, I would like to just refer to the heatmap, Figure~\ref{fig:heatmap}.
 
-Now, I would like to just refer to the heatmap, Figure~\ref{fig:heatmap}.
-
-
-
-
-\clearpage
+%\clearpage
 
 \begin{busyfigure}[ht]
         \centering
-        \includegraphics[width=4.5in]{figures/figJeanJacket.pdf}
+        \includegraphics[width=4.5in]{example-image} 
         \internalsubfigure{fig:schematic}{(A) A schematic to show how all the parts fit together}
         \internalsubfigure{fig:referee_experiment}{(B) A useless and wasteful experiment suggested by Reviewer \#3}
         \majorlabel{fig:final_figure}
 \end{busyfigure}
 
 I would like to refer to the main figure Figure~\ref{fig:final_figure}. But this less informative, and instead I should refer to specific panels.
-
 Now, I would like to just refer to the schematic, Figure~\ref{fig:schematic}.
-
-Now, I would like to just refer to the referee-recommended experiment, Figure~\ref{fig:referee_experiment}.
-
-
-\clearpage
+And now, I would like to just refer to the referee-recommended experiment, Figure~\ref{fig:referee_experiment}.
 
 \subsection*{Discussion}
 
-In the discussion, I will discuss all the different subpanels.
+In the discussion, I will discuss many different subpanels in many different figures.
 For example, the gel in Fig.~\ref{fig:gel}, and the schematic in Fig.~\ref{fig:schematic}.
 Or how about the genomic track in Fig.~\ref{fig:track}.
 
-
 If we move these panels around, all we need to do is change it in the captions (in the \verb|internalsubfigure| lines), and it with automatically change throughout the document! 
-
 
 \end{document}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  9 FEB 2024 22:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.12)  12 FEB 2024 13:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -251,140 +251,78 @@ Package: authblk 2001/02/27 1.3 (PWD)
 \c@Maxaffil=\count284
 \c@authors=\count285
 \c@affil=\count286
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2021/10/15 v2.17l AMS math features
-\@mathmargin=\skip60
-
-For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen167
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2021/08/26 v2.02 operator names
-)
-\inf@bad=\count287
-LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count288
-\leftroot@=\count289
-LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count290
-\DOTSCASE@=\count291
-LaTeX Info: Redefining \ldots on input line 496.
-LaTeX Info: Redefining \dots on input line 499.
-LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box62
-\strutbox@=\box63
-\big@size=\dimen168
-LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count292
-\c@MaxMatrixCols=\count293
-\dotsspace@=\muskip17
-\c@parentequation=\count294
-\dspbrk@lvl=\count295
-\tag@help=\toks23
-\row@=\count296
-\column@=\count297
-\maxfields@=\count298
-\andhelp@=\toks24
-\eqnshift@=\dimen169
-\alignsep@=\dimen170
-\tagshift@=\dimen171
-\tagwidth@=\dimen172
-\totwidth@=\dimen173
-\lineht@=\dimen174
-\@envbody=\toks25
-\multlinegap=\skip61
-\multlinetaggap=\skip62
-\mathdisplay@stack=\toks26
-LaTeX Info: Redefining \[ on input line 2938.
-LaTeX Info: Redefining \] on input line 2939.
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks27
-\inpenc@posthook=\toks28
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.sty
-Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count299
-\l__lipsum_a_int=\count300
-\l__lipsum_b_int=\count301
- (/usr/local/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (./internalsubfigures.sty
+\inpenc@prehook=\toks23
+\inpenc@posthook=\toks24
+) (./internalsubfigures.sty
 Package: internalsubfigures 2024/02/09 v1.0 Jun's internal subfigure labeler
  (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
-\c@subfigure=\count302
-\c@subtable=\count303
+\c@subfigure=\count287
+\c@subtable=\count288
 )) (/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count304
-\Gm@cntv=\count305
-\c@Gm@tempcnt=\count306
-\Gm@bindingoffset=\dimen175
-\Gm@wd@mp=\dimen176
-\Gm@odd@mp=\dimen177
-\Gm@even@mp=\dimen178
-\Gm@layoutwidth=\dimen179
-\Gm@layoutheight=\dimen180
-\Gm@layouthoffset=\dimen181
-\Gm@layoutvoffset=\dimen182
-\Gm@dimlist=\toks29
+\Gm@cnth=\count289
+\Gm@cntv=\count290
+\c@Gm@tempcnt=\count291
+\Gm@bindingoffset=\dimen167
+\Gm@wd@mp=\dimen168
+\Gm@odd@mp=\dimen169
+\Gm@even@mp=\dimen170
+\Gm@layoutwidth=\dimen171
+\Gm@layoutheight=\dimen172
+\Gm@layouthoffset=\dimen173
+\Gm@layoutvoffset=\dimen174
+\Gm@dimlist=\toks25
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip63
-\bibsep=\skip64
+\bibhang=\skip60
+\bibsep=\skip61
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count307
+\c@NAT@ctr=\count292
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 91.
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 91.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 50.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 50.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (./Project_example.aux)
 \openout1 = `Project_example.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
  (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count308
-\scratchdimen=\dimen183
-\scratchbox=\box64
-\nofMPsegments=\count309
-\nofMParguments=\count310
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count311
-\MPscratchDim=\dimen184
-\MPnumerator=\count312
-\makeMPintoPDFobject=\count313
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count293
+\scratchdimen=\dimen175
+\scratchbox=\box62
+\nofMPsegments=\count294
+\nofMParguments=\count295
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count296
+\MPscratchDim=\dimen176
+\MPnumerator=\count297
+\makeMPintoPDFobject=\count298
+\everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
  (/usr/local/texlive/2022/texmf-dist/tex/latex/grfext/grfext.sty
@@ -403,7 +341,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
 )
-Package hyperref Info: Link coloring ON on input line 91.
+Package hyperref Info: Link coloring ON on input line 50.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -411,11 +349,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count314
+\c@section@level=\count299
 )
-LaTeX Info: Redefining \ref on input line 91.
-LaTeX Info: Redefining \pageref on input line 91.
-LaTeX Info: Redefining \nameref on input line 91.
+LaTeX Info: Redefining \ref on input line 50.
+LaTeX Info: Redefining \pageref on input line 50.
+LaTeX Info: Redefining \nameref on input line 50.
  (./Project_example.out) (./Project_example.out)
 \@outlinefile=\write3
 \openout3 = `Project_example.out'.
@@ -425,7 +363,7 @@ Package caption Info: End \AtBeginDocument code.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 91.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 50.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -461,63 +399,62 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 93.
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 93.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<figures/figJeanJacket.pdf, id=4, 506.86563pt x 230.56439pt>
-File: figures/figJeanJacket.pdf Graphic file (type pdf)
-<use figures/figJeanJacket.pdf>
-Package pdftex.def Info: figures/figJeanJacket.pdf  used on input line 103.
-(pdftex.def)             Requested size: 325.215pt x 147.94064pt.
- [1
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 52.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 52.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 52.
+<example-image.pdf, id=12, 321.2pt x 240.9pt>
+File: example-image.pdf Graphic file (type pdf)
+<use example-image.pdf>
+Package pdftex.def Info: example-image.pdf  used on input line 65.
+(pdftex.def)             Requested size: 325.215pt x 243.91725pt.
+[1
 
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figures/figJeanJacket.pdf>]
-File: figures/figJeanJacket.pdf Graphic file (type pdf)
-<use figures/figJeanJacket.pdf>
-Package pdftex.def Info: figures/figJeanJacket.pdf  used on input line 121.
-(pdftex.def)             Requested size: 325.215pt x 147.94064pt.
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </usr/local/texlive/2022/texmf-dist/tex/latex/mwe/example-image.pdf>]
+File: example-image.pdf Graphic file (type pdf)
+<use example-image.pdf>
+Package pdftex.def Info: example-image.pdf  used on input line 85.
+(pdftex.def)             Requested size: 325.215pt x 243.91725pt.
  [2
 
 ]
-File: figures/figJeanJacket.pdf Graphic file (type pdf)
-<use figures/figJeanJacket.pdf>
-Package pdftex.def Info: figures/figJeanJacket.pdf  used on input line 140.
-(pdftex.def)             Requested size: 325.215pt x 147.94064pt.
- [3
-
-]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 162.
+File: example-image.pdf Graphic file (type pdf)
+<use example-image.pdf>
+Package pdftex.def Info: example-image.pdf  used on input line 103.
+(pdftex.def)             Requested size: 325.215pt x 243.91725pt.
+File: example-image.pdf Graphic file (type pdf)
+<use example-image.pdf>
+Package pdftex.def Info: example-image.pdf  used on input line 118.
+(pdftex.def)             Requested size: 325.215pt x 243.91725pt.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 134.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Overfull \hbox (1.48535pt too wide) in paragraph at lines 162--163
+Overfull \hbox (1.48535pt too wide) in paragraph at lines 134--135
 []\OT1/ptm/m/n/10.95 If we move these pan-els around, all we need to do is change it in the cap-tions (in the [][]\OT1/pcr/m/n/10.95 internalsubfigure
  []
 
-[4
+[3
 
-] (./Project_example.aux)
+] [4] (./Project_example.aux)
 Package rerunfilecheck Info: File `Project_example.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: F147102E8066ED9E536D75FC03B370EC;501.
  ) 
 Here is how much of TeX's memory you used:
- 16734 strings out of 478268
- 319872 string characters out of 5846346
- 663803 words of memory out of 5000000
- 34729 multiletter control sequences out of 15000+600000
- 484777 words of font info for 62 fonts, out of 8000000 for 9000
+ 15240 strings out of 478268
+ 297102 string characters out of 5846346
+ 557883 words of memory out of 5000000
+ 33268 multiletter control sequences out of 15000+600000
+ 485001 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,7n,79p,304b,749s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on Project_example.pdf (4 pages, 589792 bytes).
+ 70i,7n,79p,392b,745s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on Project_example.pdf (4 pages, 57994 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
- 8 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 79 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
+ 22 words of extra memory for PDF output out of 10000 (max. 10000000)
 

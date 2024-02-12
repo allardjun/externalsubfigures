@@ -1,3 +1,6 @@
+% A package to label subfigures, even if these were made in an external program and contained in a single graphic. 
+% Jun Allard allardlab.com
+
 \ProvidesPackage{internalsubfigures}[2024/02/09 v1.0 Jun's internal subfigure labeler]
 
 \RequirePackage{subcaption}
@@ -16,6 +19,8 @@
 % Command to store the majorlabel (label for the full figure)
 \newcommand{\themajorlabel}{}
 \newcommand{\thefirstsentence}{}
+\newcommand{\thelastsentence}{}
+
 
 % Command to add a new element to labellist and captionlist
 \newcommand{\internalsubfigure}[2]{%
@@ -30,6 +35,7 @@
 % Command to create a label for the entire figure.
 \newcommand{\majorlabel}[1]{\def\themajorlabel{#1}}
 \newcommand{\firstsentence}[1]{\def\thefirstsentence{#1}}
+\newcommand{\lastsentence}[1]{\def\thelastsentence{#1}}
 
 
 % Command to clear the labellist, captionlist and major label
@@ -37,6 +43,7 @@
 \newcommand{\resetcaptionlist}{\renewcommand{\captionlist}{}}
 \newcommand{\resetmajorlabel}{\renewcommand{\themajorlabel}{}}
 \newcommand{\resetfirstsentence}{\renewcommand{\thefirstsentence}{}}
+\newcommand{\resetlastsentence}{\renewcommand{\thelastsentence}{}}
 
 
 % Command to process the labels from labellist into subfigure labels
@@ -79,6 +86,7 @@
       \thefirstsentence
       \protect\processinternalcaption
       \label{\themajorlabel}
+      \thelastsentence
     }
     \end{figure}
   }
